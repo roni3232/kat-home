@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><defs>
+<filter id="chalk" x="-10%" y="-10%" width="120%" height="120%">
+ <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="w"/>
+ <feDisplacementMap in="SourceGraphic" in2="w" scale="9" xChannelSelector="R" yChannelSelector="G" result="d"/>
+ <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7" result="g"/>
+ <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.2 1.55" result="m"/>
+ <feComposite in="d" in2="m" operator="in"/>
+</filter>
+<filter id="board"><feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="3" seed="2" result="t"/><feColorMatrix in="t" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .22 -.04"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+<filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" seed="9" result="t"/><feColorMatrix in="t" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .5 -.2"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+</defs>
+<rect width="1024" height="1024" rx="228" fill="#1a2d4a"/><rect width="1024" height="1024" rx="228" fill="#fff" filter="url(#board)"/><g filter="url(#chalk)"><path d="M150 440 512 150l362 290M210 400v470h604V400" stroke="#ffffff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity=".9"/><path d="M700 260v-80h60v130" stroke="#ffffff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity=".9"/><path d="M512 330s-44-26-44-60a25 25 0 0 1 44-15 25 25 0 0 1 44 15c0 34-44 60-44 60z" fill="none" stroke="#ff8fbf" stroke-width="18"/><g transform="translate(0 40) translate(512 600) scale(0.92) translate(-512 -600)"><g stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none">
+ <g stroke="#a8f7df"><circle cx="370" cy="470" r="62"/><path d="M370 532v170M370 702l-60 120M370 702l60 120M370 580l-80 70M370 580l142 60"/><path d="M322 418l12-30M352 410l6-32M384 410l-2-32M414 420l-10-30"/></g>
+ <g stroke="#ffb6d6"><circle cx="654" cy="470" r="62"/><path d="M654 532v40M654 572l-70 170h140z" /><path d="M630 742v80M678 742v80M654 580l80 70M654 590l-142 50"/><path d="M596 452q-50-20-40 50M712 452q50-20 40 50"/></g>
+ <g stroke="#fff6d8" stroke-width="12"><circle cx="350" cy="462" r="4"/><circle cx="390" cy="462" r="4"/><path d="M348 492q22 20 44 0"/><circle cx="634" cy="462" r="4"/><circle cx="674" cy="462" r="4"/><path d="M632 492q22 20 44 0"/></g>
+</g></g></g></svg>
